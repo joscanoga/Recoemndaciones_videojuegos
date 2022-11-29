@@ -1,0 +1,73 @@
+.textosecunadario{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 68px;
+    color: #afeb8f;
+    
+    
+}
+.textoprincipal{
+    background-color: antiquewhite;
+    border-radius: 50px;
+    color: #002f7b;
+    font-size: 62px;
+    margin-bottom: 25px;
+}
+.texto{
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+    
+}
+.left{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    
+}
+.right{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    
+}
+.imagen{
+    
+    border-radius: 50px;
+    
+}
+.juego{
+    background-color: antiquewhite;
+    border-radius: 50px;
+    color: #002f7b;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    
+}
+.juegos{
+    margin: 0 auto;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    width: 90%;
+}
+.juegos p{
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.juegos h1{
+    color: white;
+}
+.puntuacion{
+    padding-right: 15px;
+    padding-top: 5px;
+}

@@ -1,0 +1,14 @@
+body{
+
+    
+    height:100vh;
+    background-image: radial-gradient(circle at -20.71% 50%, #4754be 0, #002e7b 50%, #00063d 100%);
+}
+.content{
+    height:94vh;
+    display: flex;
+}
+.navbar{
+    height:6vh;
+    padding: 10px;
+}

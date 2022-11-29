@@ -1,0 +1,65 @@
+{% extends "plantilla.html" %}
+{% block actualrecomendacion %}
+    <span class="sr-only">(actual)</span>
+{% endblock %}
+{% block css %}
+<link href="{{ url_for('static', filename='css/recomendacion.css') }}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div class="left">
+    <div class="texto">
+        <div class="textosecunadario">
+            Recomendador  de
+        </div>
+        <div class="textoprincipal">
+            video juegos
+        </div>
+        <img src="{{ url_for('static', filename='images/recomendacion.png') }}" alt=""  class="imagen" >
+    </div>
+</div>
+<div class="right">
+    
+    <div class="juegos">
+        <h1>lista de juegos recomendados </h1>
+
+            <div class="juego">
+                <p>Nombre: juego 1</p>
+                <div class="puntuacion">
+                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10" readonly/>
+                </div>
+                
+            </div>
+            <div class="juego">
+                <p>Nombre: juego 1</p>
+                <div class="puntuacion">
+                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10" readonly/>
+                </div>
+                
+            </div>
+            <div class="juego">
+                <p>Nombre: juego 1</p>
+                <div class="puntuacion">
+                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10" readonly/>
+                </div>
+                
+            </div>
+            <div class="juego">
+                <p>Nombre: juego 1</p>
+                <div class="puntuacion">
+                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10" readonly/>
+                </div>
+                
+            </div>
+            <div class="juego">
+                <p>Nombre: juego 1</p>
+                <div class="puntuacion">
+                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10" readonly/>
+                </div>
+                
+            </div>
+
+
+    </div>
+   
+</div>
+{% endblock %}

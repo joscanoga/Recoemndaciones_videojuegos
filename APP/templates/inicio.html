@@ -1,0 +1,23 @@
+{% extends "plantilla.html" %}
+
+{% block css %}
+<link href="{{ url_for('static', filename='css/inicio.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="left">
+        <div class="texto">
+            <div class="textosecunadario">
+                Recomendador  de
+            </div>
+            <div class="textoprincipal">
+                video juegos
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        
+            <img src="{{ url_for('static', filename='images/inicio.png') }}" alt=""  class="imagen" >
+       
+    </div>
+{% endblock %}
