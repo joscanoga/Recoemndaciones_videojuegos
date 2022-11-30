@@ -17,14 +17,15 @@ def agregar():  # put application's code here
 @app.route('/recomendar',methods=["GET","POST"])
 def recomendar():  # put application's code here
     juegos = ["pelicula 1", "pelicula 23", "pelicula 3"]
-    matrix,header=rec.read_data()
+    matrix=rec.matrix
+
     if request.method == "GET":
-        juegos = pd.DataFrame(header).sample(10).values
+        juegos = pd.DataFrame(rec.header).sample(10).values
 
         return render_template("recomendacion.html",juegos=juegos)
     else:
 
-        recomendados=rec.recommend_games(matrix,rec.build_user_vector(request.form.to_dict(),header),header,5)
+        recomendados=rec.recommend_games(matrix,rec.build_user_vector(request.form.to_dict(),rec.header),rec.header,5)
         print(recomendados)
         return render_template("lista.html",juegos=recomendados)
 

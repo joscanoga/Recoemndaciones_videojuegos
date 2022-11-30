@@ -104,7 +104,14 @@ user_dictionary = {'Patrician IV': 0.3,
  'Sorority Rites': 0.7}
 matrix, header = read_data()
 user_vector = build_user_vector(user_dictionary, header)
-
+def build_user_vector(user_scores, header=header):
+  indexes = []
+  user_vector = np.zeros(len(header))
+  for key, value in user_scores.items():
+    indexes.append((np.where(np.array(header) == key)[0][0], value))
+  for index, value in indexes:
+    user_vector[index] = value
+  return user_vector
 def recommend_games(colaborative_matrix, user_vector, header, n_recommendations=3):
   # Conversión a numpy.
   user_vector = np.array(user_vector)
