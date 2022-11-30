@@ -14,7 +14,7 @@ la recomendación se construye con recommend_games(matrix, user_vector, header),
 def build_user_vector(user_scores, header):
   indexes = []
   user_vector = np.zeros(len(header))
-  for key, value in user_dictionary.items():
+  for key, value in user_scores.items():
     indexes.append((np.where(np.array(header) == key)[0][0], value))
   for index, value in indexes:
     user_vector[index] = value
@@ -138,3 +138,5 @@ def recommend_games(colaborative_matrix, user_vector, header, n_recommendations=
   return result_dict
 
 print(recommend_games(matrix, user_vector, header, 4))
+
+#print(header)

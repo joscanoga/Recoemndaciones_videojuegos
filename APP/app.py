@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request
+from recommendation_module import recommendation as rec
+import pandas as pd
 
 app = Flask(__name__)
 #variable para guardar los resultados delcliente
@@ -14,10 +16,17 @@ def agregar():  # put application's code here
 
 @app.route('/recomendar',methods=["GET","POST"])
 def recomendar():  # put application's code here
+    juegos = ["pelicula 1", "pelicula 23", "pelicula 3"]
+    matrix,header=rec.read_data()
     if request.method == "GET":
-        return render_template("recomendacion.html")
+        juegos = pd.DataFrame(header).sample(10).values
+
+        return render_template("recomendacion.html",juegos=juegos)
     else:
-        return render_template("lista.html")
+
+        recomendados=rec.recommend_games(matrix,rec.build_user_vector(request.form.to_dict(),header),header,5)
+        print(recomendados)
+        return render_template("lista.html",juegos=recomendados)
 
 
 @app.route('/resultados')

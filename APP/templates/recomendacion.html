@@ -22,41 +22,17 @@
     <div class="juegos">
         <h1>califique los siguentes juegos</h1>
         <form METHOD="POST">
+            {% for i in juegos %}
             <div class="juego">
-                <p>Nombre: juego 1</p>
+                <p>Nombre: {{ i[0]}}</p>
                 <div class="puntuacion">
-                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10">
+                    puntuacion: <input type="number" id="{{ i[0] }}" name="{{ i[0] }}"min="0" max="10" value="0">
                 </div>
                 
             </div>
-            <div class="juego">
-                <p>Nombre: juego 1</p>
-                <div class="puntuacion">
-                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10">
-                </div>
-                
-            </div>
-            <div class="juego">
-                <p>Nombre: juego 1</p>
-                <div class="puntuacion">
-                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10">
-                </div>
-                
-            </div>
-            <div class="juego">
-                <p>Nombre: juego 1</p>
-                <div class="puntuacion">
-                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10">
-                </div>
-                
-            </div>
-            <div class="juego">
-                <p>Nombre: juego 1</p>
-                <div class="puntuacion">
-                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10">
-                </div>
-                
-            </div>
+
+            {% endfor %}
+
             <div class="submit"> <button type="submit" class="btn btn-primary mb-2">obtener recomendacion</button></div>
         </form>
     </div>

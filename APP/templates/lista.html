@@ -22,41 +22,16 @@
     <div class="juegos">
         <h1>lista de juegos recomendados </h1>
 
+            {% for i in juegos %}
             <div class="juego">
-                <p>Nombre: juego 1</p>
+                <p>Nombre: {{ i}}</p>
                 <div class="puntuacion">
-                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10" readonly/>
+                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10" value="{{ juegos[i] }}">
                 </div>
-                
+
             </div>
-            <div class="juego">
-                <p>Nombre: juego 1</p>
-                <div class="puntuacion">
-                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10" readonly/>
-                </div>
-                
-            </div>
-            <div class="juego">
-                <p>Nombre: juego 1</p>
-                <div class="puntuacion">
-                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10" readonly/>
-                </div>
-                
-            </div>
-            <div class="juego">
-                <p>Nombre: juego 1</p>
-                <div class="puntuacion">
-                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10" readonly/>
-                </div>
-                
-            </div>
-            <div class="juego">
-                <p>Nombre: juego 1</p>
-                <div class="puntuacion">
-                    puntuacion: <input type="number" id="juego1" name="calificaion"min="0" max="10" readonly/>
-                </div>
-                
-            </div>
+
+            {% endfor %}
 
 
     </div>
